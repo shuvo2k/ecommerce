@@ -60,6 +60,14 @@ a.navbar-brand .fa-shipping-fast {
     color: red;
     font-size: 25px;
 }
+a.emptycart {
+
+    margin-top: 0px;
+    color: #fffdfd;
+    background: #d05b5b;
+    padding: 9px;
+    border-radius: 15px;
+}
 
 /*sidebar css*/
 

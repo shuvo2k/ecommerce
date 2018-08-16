@@ -32,7 +32,7 @@
  {{ totail_items }} item {{ totail_items|pluralize }}, <i class="fas fa-dollar-sign"></i> {{ cart.get_total_price }}
                     </a>
                     {% else %}
-                    Your cart is empty.
+                    <li><a href="{% url "cart:cart_detail" %}" class="emptycart">Your Cart is Empty.</a></li>
                 {% endif %}
             {% endwith %}
          </li>
