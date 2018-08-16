@@ -1,0 +1,74 @@
+  {% extends 'shop/base.html' %} {% load static %} {% block title %} {% if category %}{{ category.name }} {% else %} Products {% endif %} {% endblock %} {% block content %}
+<div class="container">
+    <div class="row" style="margin-top: 6%">
+
+        <div class="col-md-9 blog-post">
+            <div class="row">
+
+                <div class="col-md-5">
+                    <img src="{% if product.image %} {{ product.image.url }} {% else %} {% static 'img/default.jpg' %} {% endif %}" class="img-responsive" alt="...">
+
+                </div>
+                <div class="col-md-7 individualproduct">
+                    <h1>{{ product.name }}</h1>
+                    <p>{{ product.description|safe|linebreaksbr }}</p>
+
+                    <h6>Category : 
+                        <a href="{{ product.category.get_absolute_url }}"> {{ product.category }}</a>
+                    </h6>
+                    <p class="cash"><i class="fas fa-dollar-sign"></i>
+{{ product.price }}</p>
+                    <form action="{%url 'cart:cart_add' product.id%}" method="POST">
+                        {% csrf_token %} {{cart_product_form}}
+                        <br>
+                        <input type="submit" value="Add to Cart" class="btn btn-primary">
+                    </form>
+                </div>
+
+            </div>
+
+        </div>
+        <!-- /.blog-post -->
+        <div class="col-md-3">
+            <div class="sidebar-module">
+                <h4>Categories</h4>
+                <ol class="list-unstyled">
+                    <li {% if not category %} class="active" {% endif %}><a href="{% url 'shop:product_list' %}">All</a></li>
+                    {% for c in categories %} {% if c.slug %} {% if category.slug %}
+                    <li class="active">
+                        {% endif %}
+                        <li>
+                            {% endif %}
+                            <!-- <h4>c.slug={{c.slug}} and category.slug={{category.slug}}amd {{category}}</h4> -->
+                            <a href="{{ c.get_absolute_url }}">{{ c.name }}</a>
+                        </li>
+                        {% endfor %}
+                </ol>
+            </div>
+        </div>
+        <!-- ./sidebar-module -->
+
+
+    </div>
+    <!-- /.row -->
+    <h2 class="recentadded">Recent Added : </h2>
+    <div class="row recomender-box">
+
+        {% for p in products %}
+        <div class="col-md-3">
+            <div class="recomendation">
+                <a href="{{p.get_absolute_url}}">
+                    <img src="{% if p.image %} {{ p.image.url }} {% else %} {% static 'img/default.jpg' %} {% endif %}" class="img-thumbnail" alt="...">
+                </a>
+                <h4>{{p.name}}</h4>
+                <p class="cash"><i class="fas fa-dollar-sign"></i>
+{{ product.price }}</p>
+            </div>
+        </div>
+        <!-- ./recomendation -->
+        {% endfor %}
+    </div>
+
+</div>
+<!-- /.container -->
+{% endblock %}

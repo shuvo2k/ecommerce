@@ -1,0 +1,223 @@
+/*global css*/
+
+body {
+    font-family: 'Ubuntu', sans-serif;
+}
+
+.cash{
+   font-weight: bold;
+   font-size: 14px;
+}
+.fa-dollar-sign {
+    color: yellow;
+}
+
+.fa-shopping-cart{
+color: #09e2a6;
+}
+
+button.pull-right {
+    float: right!important;
+    margin-right: 20px;
+}
+.parallax {
+    margin-top: -20px;
+    background-image: url(../img/advertisement.jpg);
+    min-height: 620px;
+    background-attachment: fixed;
+    background-position: center;
+    background-repeat: no-repeat;
+    background-size: cover;
+}
+
+/*navbar css*/
+.navbar-inverse {
+    background: #5d3582;
+    border-color: #5d3582;
+   
+    border-radius: none;
+    border-radius: 0px;
+}
+.navbar-inverse .navbar-nav>li>a.cartbtn {
+    margin-top: -15px;
+    color: #fffdfd;
+    background: #d05b5b;
+    padding: 9px;
+    border-radius: 15px;
+}
+
+.navbar-inverse .navbar-nav>li>a {
+    color: #ffffff;
+    font-weight: bold;
+}
+.navbar-inverse .navbar-brand {
+    font-size: 24px;
+    font-weight: bold;
+    margin-top: -5px;
+    color: white;
+}
+a.navbar-brand .fa-shipping-fast {
+    color: red;
+    font-size: 25px;
+}
+
+/*sidebar css*/
+
+.sidebar-module {
+    background:#b38bda0d;
+    text-align: center;
+    border-radius: 5px;
+    padding-bottom: 2px;
+}
+
+.sidebar-module h4 {
+      background: #5d3582;
+    padding: 6px 0px;
+    color: white;
+}
+.sidebar-module li {
+    padding: 8px 0px 8px 0px;
+}
+
+
+/*product list css*/
+h2.product-heading {
+        text-align: center;
+    font-size: 41px;
+        color: #5d3582;
+    text-transform: uppercase;
+    font-weight: bold;
+    margin-top: 50px;
+    margin-bottom: 30px;
+}
+.blog-post img.img-thumbnail{
+    width: 100%;
+    height: 250px;
+}
+.caption {
+    background: #5d3582;
+}
+.caption a, .caption p {
+    color: white;
+}
+
+/*product decription page*/
+
+.col-md-9.blog-post {
+    text-align: justify;
+    justify-content: center;
+}
+
+.blog-post div div {
+    overflow: hidden;
+}
+
+.col-md-7.individualproduct {
+    padding-left: 25px;
+}
+.col-md-7.individualproduct h1 {
+    margin: -2px 0px 10px 0px;
+}
+
+.col-md-7.individualproduct h6{
+     font-weight: bold; 
+ line-height: 20px; 
+        font-size: 14px;
+}
+
+
+
+
+h2.recentadded {
+    text-transform: capitalize;
+    border-bottom: 5px solid cadetblue;
+    border-bottom-width: 7px;
+    margin: 50px 0px 20px 0px;
+}
+.col-md-7.individualproduct form input {
+    margin: 10px 0px;
+}
+
+.recomendation p {}
+
+.recomendation h4 {
+    color: black;
+    margin: 6px 0px;
+}
+
+.recomendation a img {
+    height: 200px;
+    width: 100%;
+}
+
+.recomendation {
+    box-shadow: crimson;
+    border-radius: 9px;
+    font-weight: bold;
+    text-align: center;
+    border: 1px solid #0d0c0e26;
+    box-shadow: 2px 6px 18px 0px #00000047;
+    margin: 0px 0px 20px 0px;
+}
+
+.row.recomender-box div {
+    overflow: hidden;
+}
+
+/*footer css*/
+footer {
+    background: #5d3582;
+    color: white;
+    margin-top: 50px;
+}
+
+.col-md-3.office, .col-md-3.location, .col-md-3.quicklinks, .col-md-3.socialmedia {
+    text-align: center;
+    list-style: none;
+}
+.col-md-3.office h4, .col-md-3.location h4, .col-md-3.quicklinks h4, .col-md-3.socialmedia h4 {
+    font-size: 20px;
+    font-weight: bold;
+    margin: 20px 0px 12px 0px;
+}
+.location img.img-thumbnail {
+    width: 200px;
+    height: 151px;
+}
+.col-md-3.quicklinks li a {
+    color: white;
+}
+.container-fluid.rights {
+    text-align: center;
+    background: #513169;
+    font-size: 14px;
+    padding: 15px 0px;
+    margin-top: 25px;
+}
+.col-md-3.socialmedia a {
+    font-size: 45px;
+    padding: 0px 4px;
+    color: white;
+}
+
+/*about us page*/
+.about-bg{
+    background-image: url('../img/about.jpg');
+     margin-top: -20px;
+  
+    min-height: 320px;
+    background-attachment: fixed;
+    background-position: center;
+    background-repeat: no-repeat;
+    background-size: cover;
+}
+.about-bg h2 {
+    text-align: center;
+    font-size: 60px;
+    padding-top: 118px;
+    color: white;
+}
+.row.about-content p {
+    text-align: justify;
+    margin: 30px 0px;
+}

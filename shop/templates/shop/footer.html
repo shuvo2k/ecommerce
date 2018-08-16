@@ -1,0 +1,37 @@
+{% load static %}
+<footer id="contact">
+    <div class="container-fluid">
+        <div class="row">
+            <div class="col-md-3 office">
+                <h4>Contact Us</h4>
+                <p>
+                    728, West Ibrahimpur, (Ashi Dag)
+                </p>
+                <p> P.S. Kafrul728</p>
+                <p>Dhaka, Bangladesh.</p>
+            </div>
+            <div class="col-md-3 location">
+                <h4>Location</h4>
+                <img src="{% static 'img/Location.png' %}" alt="location" class="img-thumbnail">
+            </div>
+            <div class="col-md-3 quicklinks">
+                <h4>Quick Links</h4>
+               <li><a href="{% url 'shop:product_list' %}">Home</a></li>
+         <li><a href="{%url 'shop:about'%}">About</a></li>
+          <li><a href="#contact">Contact</a></li>
+            </div>
+            <div class="col-md-3 socialmedia">
+                <h4>Follow Us</h4>
+
+                <a href="#"><i class="fab fa-facebook-square"></i></a>
+                <a href="#"><i class="fab fa-twitter-square"></i></a>
+                <a href="#"><i class="fab fa-google-plus-square"></i></a>
+                <a href="#"><i class="fab fa-youtube-square"></i></a>
+                <a href="#"><i class="fab fa-pinterest-square"></i></a>
+            </div>
+        </div>
+    </div>
+    <div class="container-fluid rights">
+        <span>All rights reserves to @E-commerce.com</span>
+    </div>
+</footer>

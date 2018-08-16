@@ -1,0 +1,59 @@
+{% extends 'shop/base.html' %}
+{% load static %}
+{% block title %}
+    {% if category %}{{ category.name }} {% else %} Products {% endif %}
+{% endblock %}
+
+{% block content %}
+<div class="parallax"></div>
+   <div class="container-fluid">
+
+      <div class="row">
+<h2 class="product-heading">Our Products </h2>
+<div class="col-md-3  blog-sidebar">
+          <div class="sidebar-module">
+            <h4>Categories</h4>
+            <ol class="list-unstyled">
+              <li {% if not category %} class="active"{% endif %}><a href="{% url 'shop:product_list' %}">All</a></li>
+            {% for c in categories %}
+
+              <li {% if category.slug == c.slug %} class="active"{% endif %}>
+                  <a href="{{ c.get_absolute_url }}">{{ c.name }}</a>
+              </li>
+            {% endfor %}
+            </ol>
+          </div>
+        </div><!-- /.blog-sidebar -->
+        <div class="col-md-9 blog-main">
+
+          <div class="blog-post">
+              <div class="row">
+                  {% for product in products %}
+                      <div class="col-md-4">
+                        <div class="thumbnail">
+                            <a href="{{ product.get_absolute_url }}">
+                                <img src="{% if product.image %} {{ product.image.url }} {% else %} {% static 'img/default.jpg' %} {% endif %}" alt="..." class="img-thumbnail">
+                            </a>
+                            <div class="caption">
+                                <h3 class="text-center">
+                                    <a href="{{ product.get_absolute_url }}">{{ product.name }}</a>
+                                </h3>
+                                <p class="cash text-center"><i class="fas fa-dollar-sign"></i> {{ product.price }}</p>
+                            </div>
+                        </div>
+                      </div>
+                  {% endfor %}
+              </div>
+
+
+          </div><!-- /.blog-post -->
+
+        </div><!-- /.blog-main -->
+
+        
+
+      </div><!-- /.row -->
+    
+
+    </div><!-- /.container -->
+{% endblock %}
