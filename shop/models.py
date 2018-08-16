@@ -30,6 +30,7 @@ class Product(models.Model):
     stock = models.PositiveIntegerField()
     created_at = models.DateTimeField(auto_now_add=True)
     updated_at = models.DateTimeField(auto_now=True)
+    img_url = models.URLField(max_length=300, default='none')
     image = models.ImageField(upload_to='products/%Y/%m/%d', blank=True)
 
     class Meta:
