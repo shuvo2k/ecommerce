@@ -39,7 +39,7 @@
                         <tr>
                             <td>
                                 <a href="{{ product.get__absolute_url }}">
-                                    <img src="{% if product.image %} {{ product.image.url }} {% else %} {% static 'img/default.jpg' %} {% endif %}" alt="..."  class="img-thumbnail" style="height: 130px; width: 200px;">
+                                    <img src="{% if product.image %} {{ product.image.url }} {% else %} {{product.img_url}} {% endif %}" alt="..."  class="img-thumbnail" style="height: 130px; width: 200px;">
                                 </a>
                             </td>
                             <td>{{ product.name }}</td>
