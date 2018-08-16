@@ -1,6 +1,8 @@
 # E-Commerce Using Django-2.0 and Python-3.6
-###Technology Used : Python3, Django2, Bootstrap, CSS 
-####View Live in : http://ariful.pythonanywhere.com
+
+### Technology Used : Python3, Django2, Bootstrap, CSS 
+
+#### View Live in : http://ariful.pythonanywhere.com
 ```
 
 #To get Started follow
